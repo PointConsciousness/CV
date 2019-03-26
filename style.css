@@ -1,0 +1,289 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     height: 100%;
+    }
+
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+    flex-flow: row wrap;
+    min-height: 100vh;
+    display: flex;
+    color: #fff;
+}
+.flexbox{
+    background: #6B0F0C;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px #000; 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 25vw;
+    min-height: 100vh;    
+    text-align: center;
+    padding: 15px;
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.7s;
+}
+.flexbox > * {
+
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0;
+    padding: 8px;
+    transition: transform 0.5s ease-out;
+    /* border: 1px solid red; */
+    line-height: 1.3rem;
+    text-align: left;
+    
+}
+ 
+.flex-title{
+    display: flex;
+    font-family: 'Acme', sans-serif;
+    align-self: center;
+    text-align: center;
+    line-height: initial;
+    text-transform: uppercase;
+}
+
+.flexbox h3{
+    text-align: center;
+}
+.flexbox1 h3{
+    color: rgba(0,0,0, 0.9); 
+    font-size: 1.5rem;
+}
+
+.flexbox1{
+    background: linear-gradient(rgba(51,51,51,0.7),transparent 10%,rgba(51,51,51,0.7) 90%), url("images/box-1.jpg") center/cover no-repeat;
+ }
+ .flexbox1 > *:last-child{
+     align-items: flex-start;
+     padding-left: 40px;
+ }
+ 
+ .flexbox2{
+     background: linear-gradient(to bottom,rgba(51,51,51,0.7),transparent), url("images/box-2.jpg") center/cover no-repeat;  
+ }
+ .flexbox2 .flex-title{
+     transform: translateY(3%);
+ }
+ .flexbox3{
+    background: linear-gradient(to bottom,rgba(51,51,51,0.7),transparent), url("images/box-3.jpg") left 40% center/cover no-repeat;
+ }
+ 
+ .flexbox4{
+     background: linear-gradient(rgba(51,51,51,0.7),transparent) ,url("images/box-4.jpg") center/cover no-repeat;
+ 
+ }
+ 
+ /* Flexbox transitions */
+ .flexbox > *:first-child{
+    transform: translateY(-120%);
+}
+.flexbox.open-active > *:first-child{
+    transform: translateY(0);
+}
+.flexbox > *:last-child{
+    transform: translateY(120%);
+}
+.flexbox.open-active > *:last-child{
+    transform: translateY(0);
+}
+.flexbox.open-active .flex-title{
+    transform: translateY(-140%);
+} 
+
+/* Flexbox2 */
+ .flexbox2.open-active > *:first-child{
+    transform: translateY(20%);
+}
+
+/* Flexbox3 */
+
+.flexbox3.open-active > *:first-child{
+    transform: translateY(8%);
+} 
+/* Flexbox4 */
+ .flexbox4.open-active > *:first-child{
+     transform: translateY(12%);
+ }
+
+ /* Span border bottom line class */
+ /* .border-bline{
+    border-bottom: 2px solid #fff;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+} */
+
+/* List */
+.list-items{
+    list-style-type: none;
+    padding: 2px;
+}
+.list-items p{
+    padding-bottom: 5px;
+}
+.list-item{
+    margin-bottom: 3px;
+}
+
+
+/* Additional part of the CV */
+
+.additional-part{
+    background: linear-gradient(rgba(51,51,51,0.8) 100%,transparent) ,url("images/additional_bg.jpg") center/cover no-repeat;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.additional-info{
+    margin-top: 100px;
+}
+.additional-title{
+    margin-bottom: 20px;
+}
+.additional-part .list-items{
+    margin-bottom: 15px;
+}
+
+
+/* Media queries  */
+
+@media(max-width: 60rem){
+    .container{
+        flex-flow: column wrap;
+        max-width: 100%;
+    }
+    .flexbox{
+        max-width: 100vw;
+        font-size: 1.5rem;
+
+    }
+    .flexbox .box-info{
+        line-height: 1.8rem;
+    }
+    .flexbox1.open-active .flex-title{
+        transform:translateY(-140%);
+    }
+    .flexbox1.open-active > *:first-child{
+        transform: translateY(0);
+    }
+    .flexbox1 h3{
+        font-size: 1.7rem;
+    }
+    .flexbox1.open-active > *:last-child{
+        transform:translateY(-5%);
+        align-items: flex-start;
+    }
+    .flexbox2.open-active .flex-title{
+        transform: translateY(-140%);
+    }
+    .flexbox2.open-active > *:first-child{
+        transform: translateY(55%);
+    }
+    .flexbox2.open-active > *:last-child{
+        transform: translateY(0);
+    }
+    .flexbox3.open-active .flex-title{
+        transform: translateY(-140%);
+    }
+    .flexbox3.open-active > *:first-child{
+        transform: translateY(35%);
+    }
+    .flexbox3.open-active > *:last-child{
+        transform: translateY(0);   
+    }
+    .flexbox4.open-active .flex-title{
+        transform: translateY(-140%);
+    }
+    .flexbox4.open-active > *:first-child{
+        transform: translateY(55%);
+    }
+    .flexbox4.open-active > *:last-child{
+        transform: translateY(0);
+    }
+   .additional-part{
+       justify-content: center;
+       align-items: center;
+   }
+} 
+
+
+@media(max-width: 24rem){
+    .container{
+        flex-flow: column wrap;
+    }
+    .flexbox{
+        font-size: 1.1rem;
+        line-height: 1rem;
+    }    
+
+    /* Flexbox transitions */
+    .flexbox1.open-active .flex-title{
+        transform:translateY(-150%);
+    }
+    .flexbox1.open-active > *:first-child{
+        transform: translateY(30%);
+    }
+    .flexbox1.open-active > *:last-child{
+        transform:translateY(-5%);
+        align-items: flex-start;
+    }
+    .flexbox2.open-active .flex-title{
+        transform: translateY(-700%);
+    }
+    .flexbox2.open-active > *:first-child{
+        transform: translateY(15%);
+    }
+    .flexbox2.open-active > *:last-child{
+        transform: translateY(0);
+    }
+    .flexbox3.open-active .flex-title{
+        transform: translateY(-240%);
+    }
+    .flexbox3.open-active > *:first-child{
+        transform: translateY(35%);
+    }
+    .flexbox3.open-active > *:last-child{
+        transform: translateY(0);   
+    }
+    .flexbox4.open-active .flex-title{
+        transform: translateY(-500%);
+    }
+    .flexbox4.open-active > *:first-child{
+        transform: translateY(25%);
+    }
+    .flexbox4.open-active > *:last-child{
+        transform: translateY(0);
+    }
+   
+    /* Additional part of the CV */
+
+    .additional-info{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        flex: 1 0 auto;
+        padding: 0 40px;
+    }
+}
